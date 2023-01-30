@@ -50,8 +50,18 @@ hr {
   display: none !important;
 }
 
-.notion-nav-header {
+.notion-header {
   display: none !important;
+}
+
+.notion-page-cover-wrapper {
+  margin-top: 4rem !important;
+}
+
+@media only screen and (max-width: 1000px) {
+  .notion-page-cover-wrapper {
+    margin-top: 0 !important;
+  }
 }
 
 h3 {
