@@ -38,3 +38,25 @@ body {
   color: var(--fg-color);
   caret-color: var(--fg-color);
 }
+
+/* Daniel's Manual Overrides */
+
+hr {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.breadcrumbs {
+  display: none !important;
+}
+
+.notion-nav-header {
+  display: none !important;
+}
+
+h3 {
+  width: 100% !important;
+  text-align: center !important;
+  margin-top: 0 !important;
+  margin-bottom: 4rem !important;
+}

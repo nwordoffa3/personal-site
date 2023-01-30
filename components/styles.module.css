@@ -179,7 +179,7 @@
   background: #e5f2e8;
 }
 
-@media (max-width: 1360px) {
+@media (max-width: 1000000px) {
   .githubCorner {
     display: none;
   }
