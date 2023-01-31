@@ -64,6 +64,10 @@ hr {
   }
 }
 
+aside {
+  display: none !important;
+}
+
 h3 {
   width: 100% !important;
   text-align: center !important;
