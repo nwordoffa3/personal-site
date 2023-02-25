@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -58,19 +60,206 @@ hr {
   margin-top: 4rem !important;
 }
 
-@media only screen and (max-width: 1000px) {
-  .notion-page-cover-wrapper {
-    margin-top: 0 !important;
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
-@media only screen and (min-width: 1000px) {
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes delayed-fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes delayed-fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes delayed-movein {
+  0% {
+    opacity: 0;
+    top: -5rem;
+  }
+  66% {
+    opacity: 0;
+    top: -5rem;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@-webkit-keyframes delayed-movein {
+  0% {
+    opacity: 0;
+    top: -5rem;
+  }
+  66% {
+    opacity: 0;
+    top: -5rem;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .notion-page-cover-wrapper {
+    margin-top: 0 !important;
+  }
+
+  .notion-block-d13583831ab6481d9a16b94f1628665d {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
   .notion-title {
-    font-size: 8rem !important;
+    font-size: 8rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    text-align: left !important;
+    margin-top: 36vh;
+    margin-bottom: 0;
+
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+    animation: fadein 2s;
+  }
+
+  blockquote {
+    font-size: 2rem !important;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal !important;
+    border-left: none !important;
+    width: 100vw;
+    font-size: 2rem;
+    text-align: left !important;
+    padding: 0 8px !important;
+    font-weight: 250;
+
+    -webkit-animation: delayed-fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: delayed-fadein 1.5s; /* Firefox < 16 */
+    -ms-animation: delayed-fadein 1.5s; /* Internet Explorer */
+    -o-animation: delayed-fadein 1.5s; /* Opera < 12.1 */
+    animation: delayed-fadein 1.5s;
+  }
+
+  .medium-zoom-image {
+    width: 100vw !important;
+    object-fit: contain !important;
+    border-radius: 12px;
+  }
+
+  .notion-block-1ba596eadf2a4a7eb384bc034f104111 {
+    margin-top: 0 !important;
+    margin-bottom: 5rem !important;
+
+    -webkit-animation: delayed-fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: delayed-fadein 3s; /* Firefox < 16 */
+    -ms-animation: delayed-fadein 3s; /* Internet Explorer */
+    -o-animation: delayed-fadein 3s; /* Opera < 12.1 */
+    animation: delayed-fadein 3s;
   }
 
   .notion-h-title {
+    font-weight: 500;
     font-size: 2rem !important;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal !important;
+  }
+
+  h4.notion-h {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .notion-block-d13583831ab6481d9a16b94f1628665d {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: calc((100vw - 1200px) / 2);
+    background-color: #f3f5f4 !important;
+    z-index: 1000;
+    height: 75px;
+    font-weight: 250;
+
+    -webkit-animation: delayed-movein 3s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: delayed-movein 3s; /* Firefox < 16 */
+    -ms-animation: delayed-movein 3s; /* Internet Explorer */
+    -o-animation: delayed-movein 3s; /* Opera < 12.1 */
+    animation: delayed-movein 3s;
+  }
+
+  ul {
+    list-style-type: none !important;
+  }
+
+  ul li {
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    margin-left: -1rem;
+  }
+
+  ul li a {
+    color: black !important;
+    border-bottom: none !important;
+  }
+
+  ul li a:hover {
+    border-bottom: none !important;
   }
 }
 
@@ -83,4 +272,29 @@ h3 {
   text-align: center;
   margin-top: 0 !important;
   margin-bottom: 4rem !important;
+}
+
+.notion-text {
+  font-family: 'Poppins' !important;
+  font-weight: 300;
+  text-align: justify;
+}
+
+a.notion-page-link {
+  display: none;
+}
+
+.notion-callout {
+  border: 2px solid #efb8cc;
+  border-radius: 12px;
+  transition: 1s ease;
+}
+
+.notion-callout:hover {
+  border: 2px solid #5c5f82;
+  border-radius: 12px;
+}
+
+summary {
+  visibility: hidden;
 }
