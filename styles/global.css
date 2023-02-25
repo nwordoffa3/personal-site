@@ -165,12 +165,12 @@ hr {
 
 @media only screen and (min-width: 1200px) {
   .notion-title {
-    font-size: 8rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+    font-size: 8rem !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 500 !important;
     text-align: left !important;
-    margin-top: 36vh;
-    margin-bottom: 0;
+    margin-top: 36vh !important;
+    margin-bottom: 0 !important;
 
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
