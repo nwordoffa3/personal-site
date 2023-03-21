@@ -260,22 +260,22 @@ hr {
     animation: delayed-movein 3s;
   }
 
-  ul {
+  .notion-block-d13583831ab6481d9a16b94f1628665d ul {
     list-style-type: none !important;
   }
 
-  ul li {
+  .notion-block-d13583831ab6481d9a16b94f1628665d ul li {
     font-size: 1.5rem !important;
     font-family: 'Poppins', sans-serif !important;
     margin-left: -1rem !important;
   }
 
-  ul li a {
+  .notion-block-d13583831ab6481d9a16b94f1628665d ul li a {
     color: black !important;
     border-bottom: none !important;
   }
 
-  ul li a:hover {
+  .notion-block-d13583831ab6481d9a16b94f1628665d ul li a:hover {
     border-bottom: none !important;
   }
 }
