@@ -6,6 +6,7 @@ import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin'
 import { FaMastodon } from '@react-icons/all-files/fa/FaMastodon'
 import { FaTwitter } from '@react-icons/all-files/fa/FaTwitter'
 import { FaYoutube } from '@react-icons/all-files/fa/FaYoutube'
+import { FaReadme } from '@react-icons/all-files/fa/FaReadme'
 import { FaZhihu } from '@react-icons/all-files/fa/FaZhihu'
 import { IoMoonSharp } from '@react-icons/all-files/io5/IoMoonSharp'
 import { IoSunnyOutline } from '@react-icons/all-files/io5/IoSunnyOutline'
@@ -18,24 +19,34 @@ import styles from './styles.module.css'
 // TODO: merge the data and icons from PageSocial with the social links in Footer
 
 export const FooterImpl: React.FC = () => {
-  const [hasMounted, setHasMounted] = React.useState(false)
-  const { isDarkMode, toggleDarkMode } = useDarkMode()
+  const [hasMounted, setHasMounted] = React.useState(false);
+  const [isVisible, setIsVisible] = React.useState(false); // New state for visibility
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   const onToggleDarkMode = React.useCallback(
     (e) => {
-      e.preventDefault()
-      toggleDarkMode()
+      e.preventDefault();
+      toggleDarkMode();
     },
     [toggleDarkMode]
-  )
+  );
 
   React.useEffect(() => {
-    setHasMounted(true)
-  }, [])
+    setHasMounted(true);
+  }, []);
+
+  // New effect for fading in the footer after 3 seconds
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 2000);
+
+    return () => clearTimeout(timer); // Cleanup the timer if the component is unmounted
+  }, []);
 
   return (
-    <footer className={styles.footer}>
-      <div className={styles.copyright}>Copyright 2022 {config.author}</div>
+    <footer className={styles.footer} style={{ opacity: isVisible ? 1 : 0, transition: 'opacity 0.5s' }}>
+      <div className={styles.copyright}>Copyright 2023 {config.author}</div>
 
       <div className={styles.settings}>
         {hasMounted && (
@@ -98,7 +109,10 @@ export const FooterImpl: React.FC = () => {
             <FaGithub />
           </a>
         )}
-
+        <a href="https://www.google.com" 
+          className={styles.readme}>
+          <FaReadme/>
+        </a>
         {config.linkedin && (
           <a
             className={styles.linkedin}
