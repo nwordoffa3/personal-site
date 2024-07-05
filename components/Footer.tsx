@@ -109,7 +109,7 @@ export const FooterImpl: React.FC = () => {
             <FaGithub />
           </a>
         )}
-        <a href="https://drive.google.com/file/d/1966dZX4w8KF84IpvKdBds5ILVYiu3N-k/view?usp=sharing" 
+        <a href="https://drive.google.com/file/d/14G4IaQ_PrPtajNMeUEaFJUKqyF0OazDk/view?usp=sharing" 
           className={styles.readme}>
           <FaReadme/>
         </a>
